@@ -12,11 +12,14 @@ export class CountryService {
 
   constructor(private http: HttpClient) { }
 
-  getAllCountries() {
+  getAllCountries$() {
     return(this.http.get<any[]>(this.url + '?' + this.endUrl)
     .pipe(map(data => (data[1])))
-
     );
-
+  }
+  getCountryById$(id) {
+    return this.http
+      .get<any>(this.url + id + '?' + this.endUrl)
+      .pipe(map(data => (data ? data : {})));
   }
 }
