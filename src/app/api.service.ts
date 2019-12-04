@@ -8,6 +8,7 @@ import { map } from "rxjs/operators";
 export class ApiService {
   private endPoint = "https://api.worldbank.org/v2/country";
   private format = "?per_page=1000&format=json";
+  private regionUrl = "https://api.worldbank.org/v2/region";
 
   constructor(private httpClient: HttpClient) {}
 
@@ -19,5 +20,9 @@ export class ApiService {
   getCountryById$(countryId) {
     const url = this.endPoint + "/" + countryId + this.format;
     return this.httpClient.get<any>(url).pipe(map(result => result[1][0]));
+  }
+  getAllRegions$(){
+    const url = this.regionUrl + this.format;
+    return this.httpClient.get<any[]>(url).pipe(map(result => result[1]));
   }
 }
