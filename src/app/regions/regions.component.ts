@@ -8,7 +8,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./regions.component.css']
 })
 export class RegionsComponent implements OnInit {
-  regions$: Observable<any>;
+  regions$: Observable<any[]>;
 
   constructor(private api: ApiService) {
 
