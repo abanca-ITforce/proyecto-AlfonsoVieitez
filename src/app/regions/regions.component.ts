@@ -16,6 +16,7 @@ export class RegionsComponent implements OnInit {
 
   ngOnInit() {
     this.regions$ = this.api.getAllRegions$();
+
   }
 
 }
