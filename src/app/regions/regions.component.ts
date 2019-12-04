@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ab-regions',
+  selector: 'app-regions',
   templateUrl: './regions.component.html',
   styleUrls: ['./regions.component.css']
 })

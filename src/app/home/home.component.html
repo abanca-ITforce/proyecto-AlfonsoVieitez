@@ -1,11 +1,1 @@
-<mat-nav-list role="list" *ngIf="countryList$ | async as countryList; else empty">
-    <ng-container *ngFor="let country of countryList">
-      <mat-list-item [routerLink]="['country',country.id]">{{ country.name }}</mat-list-item>
-      <mat-divider></mat-divider>
-    </ng-container>
-  </mat-nav-list>
-  <ng-template #empty>
-      <h1>Cargando...</h1>
-    </ng-template>
-
-<!-- <p>Esto es el home</p> -->
+<p>home works!</p>
